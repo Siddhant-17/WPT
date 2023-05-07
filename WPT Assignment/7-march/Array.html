@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr=[]
+        function insertI()
+            {
+                var v1=document.getElementById("i1").value
+                if(isNaN(v1))
+                {
+                    let x=v1
+                    arr.push(x)
+                    document.getElementById("p1").innerText=arr
+                }
+                else
+                {
+                    let x=parseInt(v1)
+                    arr.push(x)
+                    document.getElementById("p1").innerText=arr
+                    
+                }
+                console.log(arr)
+        }       
+
+        function sort()
+        {
+            arr.sort()
+            document.getElementById("p1").innerText=arr
+        }
+        function search()
+        {
+            var v1=document.getElementById("i1").value
+            if(isNaN(v1))
+            {
+                document.getElementById("p1").innerHTML=`Element is found at index ${arr.indexOf(v1)}`
+            }
+            else if(!isNaN(v1))
+            {
+                let x=parseInt(v1)
+                console.log(arr.indexOf(x))
+                document.getElementById("p1").innerHTML=`Element is found at index ${arr.indexOf(x)}`
+            }
+            //  document.getElementById("p1").innerHTML=`Element is not found `   
+            
+        }
+        function deleteE()
+        {
+            
+        }
+        
+
+
+            
+
+    </script>
+</head>
+<body>
+    <input  id="i1" type="text"  name="enter"/>
+    <!-- <input  id="i2" type="button" onclick="insert()" name="insert"/> -->    
+        <input id="i2" type="button" onclick="insertI()" value="Insert">
+        <input id="i3" type="button" onclick="sort()" value="sort"/>
+        <br>
+        <br>
+        <input type="button" onclick="search()" value="search"/>
+        <br>
+        <br>
+        <input type="button" onclick="deleteE()" value="Delete"/>
+        <input id="i4" type="number" name="at" placeholder="Enter index">
+            <p id="p1"></p>
+
+            <p id="p2"></p>
+
+
+</body>
+</html>
