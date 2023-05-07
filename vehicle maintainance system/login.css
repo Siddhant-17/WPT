@@ -1,0 +1,61 @@
+#d1{
+margin-top: 5%;
+margin-left: 20%;
+border-style: groove;
+border-width:10px;
+border-color: black;
+width: 300px;
+height: 400px;
+background-color:white;
+}
+#i1
+{
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 180px;
+    height: 25px;
+    border-color: black;    
+    margin-left: 60;
+    border-width:0.3ex;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#i2
+{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 180px;
+    height: 25px;
+    border-color: black;
+    border-width:0.3ex;
+    margin-left: 60;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+#pic
+{
+    width: 200px;
+    height: 100px;
+    margin-top: 2em;
+    margin-left: 50;
+
+}
+#i3
+{
+    margin-top: 4px;
+    margin-left: 110;
+    width: 80px;
+    height: 25px;
+    border-color: black;
+
+}
+#i4
+{
+    margin-top: 4px;
+    margin-left: 110;
+    width: 80px;
+    height: 25px;
+    border-color: black;
+
+}

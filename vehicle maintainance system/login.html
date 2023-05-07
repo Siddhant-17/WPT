@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" href=".\login.css"/>
+    
+        <script>
+            function login()
+            {
+                const username="sid_17"
+                const password="123"
+                let uname=document.getElementById("i1").value
+                let pass=document.getElementById("i2").value
+                if(username==uname && password == pass)
+                {
+                    alert("Login succesfull")
+                }
+                else
+                {
+                    alert("Invalid usename password")
+                }
+                }
+                
+                
+            
+
+        </script>
+    </head>
+    <body style="background-color: rgb(58, 56, 57);">
+        <form  action=".\sencondpage.html">
+        <div id="d1">
+            <img id="pic" src="75703958.jpg" />
+        <input id="i1" type="text" name="username" placeholder="Username"/>
+        <input id="i2" type="password" name="password" placeholder="password"/>
+        <button id="i3" onclick="login()">Login</button>
+        
+       <hr style="margin-top: 20px; color: rgb(7, 7, 7);">
+            
+       <input id="i4" type="submit" value="SIGN UP">
+       <p id="line" style="text-align: right;margin-top:0.3%;margin-right: 5px;"><a href=".\forgetpass.html">forget password</a></p>
+    </form>
+    </div>
+
+
+    </body>
+</html>
