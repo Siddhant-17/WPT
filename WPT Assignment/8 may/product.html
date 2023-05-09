@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let product=[]
+        
+
+        function addp()
+        {
+            let v1=document.getElementById("i1").value
+            let v2=parseInt(document.getElementById("i2").value)
+            let v3=document.getElementById("i3").value
+            product.push({productname:v1,productcost:v2,productdesc:v3})
+            console.log(product)
+        }
+        function showp()
+        {
+            document.getElementById("p1").innerText=product[0]
+     }
+
+
+    </script>
+
+
+</head>
+<body>
+    
+
+<input type="text" id="i1" placeholder="productname"/>
+<input type="number" id="i2" placeholder="productcost">
+<input type="text" id="i3" placeholder="productdesc"/>
+<br>
+<input type="button" id="b1" value="insert" onclick="addp()"/>
+<br>
+<input type="button" id="b2" value="showname" onclick="showp()"/>
+
+<p id="p1"></p>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
