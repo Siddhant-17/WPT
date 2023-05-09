@@ -19,7 +19,37 @@
         }
         function showp()
         {
-            document.getElementById("p1").innerText=product[0]
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script>
+        let product=[]
+        
+
+        function addp()
+        {
+            let v1=document.getElementById("i1").value
+            let v2=parseInt(document.getElementById("i2").value)
+            let v3=document.getElementById("i3").value
+
+            product.push({productname:v1,productcost:v2,productdesc:v3})
+            //console.log(product,typeof(product[0].productname),typeof(product))
+            
+            
+           
+        }
+        function showp()
+        {
+            for(let i =0;i<product.length;i++){
+         document.getElementById("p1").innerHTML=document.getElementById("p1").innerHTML+ "  "+'<br>'+product[i].productname + "  " + product[i].productcost + "  " + product[i].productdesc}
+        }
+        
+        
+
+
+    </script>
+
      }
 
 
