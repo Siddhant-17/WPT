@@ -1,0 +1,24 @@
+<html>
+<head>
+    <script>
+        let arr =[]
+        function f1(){
+            let x = document.getElementById("i1").value
+            arr.push(x)
+        }
+        
+        function f2(){
+            for(i in arr){
+                document.getElementById("p1").innerHTML = document.getElementById("p1").innerHTML + arr[i] + "<br>"
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="i1"/>
+    <button onclick="f1()" id="b1">insert</button>
+    <button onclick="f2()" id="b2">show</button>
+
+    <p id="p1"></p>
+</body>
+</html>

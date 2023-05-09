@@ -1,0 +1,43 @@
+<html >
+<head>
+   <script>
+    let arr = []
+
+    function person(personName, personAge){
+
+        this. personName= personName
+        this.personAge = personAge
+        // person.push({personName:v1 , personAge:v2})
+    
+        console.log(arr)
+    }
+    function insert(){
+
+        let v1=document.getElementById("i1").value
+        let v2=parseInt(document.getElementById("i2").value)
+        arr.push(new person(v1 ,v2))
+
+    console.log(arr)
+    }
+
+
+    function showDetails(){
+        for(let i=0; i<arr.length; i++){
+            document.getElementById("p1").innerHTML=document.getElementById("p1").innerHTML+ "  "+'<br>'+arr[i].personName + "  " + arr[i].personAge 
+        }
+    }
+    
+
+    </script> 
+</head>
+<body>
+    <input type="text" id="i1" placeholder="person name"/>
+    <input type="number" id="i2" placeholder="person age"/>
+    <input type="button" id="b1" value="insert" onclick="insert()"/>
+    <input type="button" id="b2" value="show" onclick="showDetails()"/>
+
+    <p id="p1"></p>
+
+
+</body>
+</html>

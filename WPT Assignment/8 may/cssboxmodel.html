@@ -1,0 +1,39 @@
+<html>
+<head>
+   <style>
+       *{
+           width: fit-content;
+       }
+
+       #d1{
+           background-color: aquamarine;
+       }
+
+       #d2{
+           background-color:antiquewhite;
+           margin-top: 20px;
+           border-width: 5px;
+           border-style: solid;
+           padding: 10px;
+           display: block; 
+       }
+   </style>
+
+   <script>
+       function stylehandler(){
+           for(x in document.getElementById("d2").style){
+               console.log(x)
+               document.getElementById("d2").style.marginTop="1px"
+           }
+       }
+   </script>
+</head>
+<body>
+    <div id="d1">
+        This is a div1
+    </div>
+    <div id="d2" onclick="stylehandler()">          <!--Click on div2-->
+        This is a div2
+    </div>
+</body>
+</html>
