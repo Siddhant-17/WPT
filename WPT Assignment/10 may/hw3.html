@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+    
+    $(document).ready(function f1(){
+        $("button").click(function(){
+
+          $("#td").html("")  
+let num=$("#i1").val()
+let from=$("#i2").val()
+let to=$("#i3").val()
+let res=0
+
+for(let i=from;i<=to;i++){
+
+    res=num*i
+   // console.log(res)
+
+    $("#T1").append(`<tr><td>${num} * ${i}</td><td>${res}</td></tr>` )
+}
+
+
+})
+})
+
+
+
+
+    </script>
+</head>
+<body>
+    <input type="number" name="" id="i1" placeholder="type a number">
+    <input type="number" name="" id="i2" placeholder="from">
+    <input type="number" name="" id="i3" placeholder="to">
+    <button>Show</button>
+    <table id="T1" border="1">
+
+        <tbody id="td">
+            <tr> <td id="td1"> </td> <td id="td2"></td></tr>
+
+        </tbody>
+        
+    
+    </table>
+
+
+
+
+</body>
+</html>

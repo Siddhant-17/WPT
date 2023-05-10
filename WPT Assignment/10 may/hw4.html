@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("d1").animate({left:"100px"})
+            var div = $("#d1")
+            div.animate({height: '300px'}, "slow");
+  div.animate({width: '300px'}, "slow");
+  div.animate({height: '100px'}, "slow");
+
+            })
+    
+
+        })
+    </script>
+</head>
+<body>
+    
+    <div id="d1" style="border-style: solid;width: 50px;">sumedh</div>
+    <button>move</button>
+</body>
+</html>

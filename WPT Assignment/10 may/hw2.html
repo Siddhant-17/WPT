@@ -1,0 +1,47 @@
+<!-- Using Jquery accept a number from the user in a textfield - on change show -->
+<!-- the factorial of that number in a <p> taf -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script>
+        
+            $(document).ready(function f1(){
+                $("button").click(function f2(){
+                    let x=$("#i1").val()
+
+                let fact=1
+                while(x!=0){
+                    fact=fact*x
+                    x--
+                }
+                $("#p1").html(`<b> ${fact}</b>`)
+
+// console.log(fact)
+
+
+                })
+
+
+
+
+            })
+           
+         
+
+
+        </script>
+
+
+    </head>
+    <body>
+    
+        <input type="number" name="" id="i1" placeholder="type a number">
+        <button>Fact</button>
+        <p id="p1"></p>
+    </body>
+    </html>

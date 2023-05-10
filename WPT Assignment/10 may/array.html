@@ -1,0 +1,44 @@
+ <!-- try out the array example to push Person details in array and show all person
+names on button click as discussed in class -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <body>
+    
+    <input type="text" id="i1" placeholder="NAME" >
+    <input type="number"  id="i2" placeholder="AGE">
+    <button onclick="insertinfo()">click</button>
+    <button onclick="showdetails()">Show</button>
+    <p id="p1"></p>
+
+    </body>
+    <head>
+   
+            <title>Array</title>
+            <script>
+        
+            let arr=[]
+            function personinfo(pname,page)
+            {
+                this.personname=pname
+                this.personage=page
+            }
+        
+            function insertinfo()
+            {
+                let v1=document.getElementById("i1").value
+                let v2=parseInt(document.getElementById("i2").value)
+                arr.push(new personinfo(v1,v2))
+                console.log(arr)
+            }
+        
+            function showdetails(){
+        
+            for(let i =0;i<arr.length;i++){
+                 document.getElementById("p1").innerHTML=document.getElementById("p1").innerHTML+ "  "+'<br>'+arr[i].personname + "  " + arr[i].personage
+                }
+            }
+        
+            </script>
+        </head>
+</html>
