@@ -1,0 +1,45 @@
+<!-- Write an html that is accepting a date of joining give a range using html
+validation , make it compulsary
+
+Add a text field to describe the job give minlength an max length
+Submit the form if the validations are false show messages
+If validations are OK then go to welcome.html -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>HTML validation</title>
+
+    <script>
+
+        function validation(){
+
+       let v1=document.getElementById("i1") 
+       let v2=document.getElementById("i2")
+       if(v1.checkValidity() && v2.checkValidity()){
+         document.getElementById("p1").innerText="ok"
+
+       }
+       else
+       {
+        document.getElementById("p1").innerText=" Not ok"
+       }
+
+
+
+        }
+    </script>
+</head>
+<body>
+
+    Date of joining: <input type="date" required name="" id="i1">
+    Job description: <input type="text" required id="i2" minlength="3" maxlength="20" >
+    <button onclick="validation()">submit</button>
+    <p id="p1"></p>
+
+    
+</body>
+</html>
