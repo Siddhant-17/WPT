@@ -45,15 +45,14 @@ productrouter.get('/getInfo', (req, res) => {
 
     for(let i=0;i<products.length;i++)
     {
-        if(products[i].productId==prodId){
+        if(products[i].productId==prodId)
+        {
           res.send(products[i])
         }
-        else
-    {
+       
+    }
+    
       res.send("not found")
-    }
-        
-    }
   })
   
 
