@@ -9,7 +9,7 @@
 
 function validate()
 {
-    let result,age,name,email,address
+    let name
     let v1=document.forms["form1"]["username"].value
     //Username
     if(v1.trim()!="" && (v1.trim()).length >2 && isNaN(v1))
@@ -21,56 +21,13 @@ function validate()
         name=false
         alert("Invalid username")
     }
-
-
-
-    //age
-  let birthday = new Date(document.forms["form1"]["age"].value)
-        let v2=parseInt((Date.now()-birthday)/(1000*60*60*24*365))
-    if(v2>18 && v2<100)
-    {
-        age=true
-    }
-    else
-    { 
-        alert("you are not allowed to view this content")
-        age=false
-    }
-
-
-
-//    emailid
-    let v3=document.forms["form1"]["email"].value
-        if(v3.includes('@') && v3.includes('.'))
-        {
-            email=true
-        }
-        else
-        {
-            email=false
-            alert("Invalid email id")
-        }
-
-
-    
-    //address
-    let v4=document.forms["form1"]["add"].value
-        let v8=v4.toLowerCase()
-    if(v8.includes("pune"))
-    {
-    address=true
-    }
-    else
-    {  
-    address=false
-    alert("kindly mention your current pune address")
-    }
-    return age && email && address && name
+  
+    return  name
 }
 </script>
 </head>
 <body>
-    <form name="form1" onsubmit="return validate()" action="/welcome">
+    <form name="form1" onsubmit="return validate()" action="/verify">
     Username : <input type="text" required placeholder="Username" name="username" >
     Password : <input type="password"  required placeholder="Password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
     <input type="submit"   value="login" >
