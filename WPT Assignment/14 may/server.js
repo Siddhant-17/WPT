@@ -11,8 +11,19 @@ app.get('/',(req,res)=>{
     res.render("C:\\Users\\SID_17\\Downloads\\project\\14 may\\14 may\\views\\login.hbs")
 })
 
-app.get('/welcome',(req,res)=>{
+app.get('/verify',(req,res)=>{
+    let v1=req.query.username
+    let v2=req.query.password
+
+    if(v1=="sid_17" && v2=="Sid@1234")
+    {
     res.render("C:\\Users\\SID_17\\Downloads\\project\\14 may\\14 may\\views\\welcome.hbs")
+    }
+       else 
+    {
+        res.send("invalid username and password")
+    }
+    
 })
 
 import bodyparser from 'body-parser'
