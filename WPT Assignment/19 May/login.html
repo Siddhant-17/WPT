@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+    <!-- <script>
+        $(document).ready(()=>{
+            $("#b1").click(()=>
+            {
+                let user= $("#username").val()
+                let pass=$("#password").val()
+                console.log(user,pass);
+
+                let data=`{"username":"${user}","password":"${pass}"}`
+
+                $.ajax({
+                    url:"b1",
+                    type:'POST',
+                    data:dataSend,
+                    sucess:function(res)
+                    {
+                        console.log("success");
+                        console.log(res);
+
+                        $("#p").text(`name=${res.user},password=${res.password}`)
+                    },
+
+                    beforeSend:function(request)
+                    {
+                        request.setRequestHeader('Content-Type','application/json')
+                    }
+                })
+
+                
+            })
+        }) -->
+    </script>
+
+     <script>
+        function f1()
+        {
+            let user=document.getElementById("username").value
+            let pass=document.getElementById("password").value
+
+            let data=`{"username":"${user}","password":"${pass}"}`
+            
+            console.log(data);
+
+            let http = new XMLHttpRequest()
+            http.onload=((res)=>
+            {
+                let kaka=JSON.parse(http.response)
+                console.log(kaka)
+
+                document.getElementById("p1").innerText=`username:${kaka.username} , password:${kaka.password}`
+               })
+
+            http.open("POST","login")
+            http.setRequestHeader("Content-Type","Application/json")
+            http.send(data)
+
+
+
+        }
+
+    function fun2(){
+        let n1= document.getElementById("n1").value
+        let num=parseInt(n1)
+        let v= num*num
+        console.log(v);
+
+        let http =new XMLHttpRequest()
+        http.onload =((res)=>{
+            
+            document.getElementById("p2").innerText=v
+        })
+        http.open("get","login")
+        http.setRequestHeader("Content-Type","Application/json")
+        http.send(v)
+    }
+     </script>
+
+</head>
+<body>
+    Username:<input type="text" id="username"/>
+    Password:<input type="password" id="password"/>
+
+    square:<input type="number" id="n1" onblur="fun2()"/>
+    
+
+    <button onclick="f1()">Login</button>
+    <br/>
+
+    <button id="b1">Login jquery</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+</body>
+</html>
