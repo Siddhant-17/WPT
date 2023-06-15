@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function f1()
+        {
+            let e1=document.getElementById("i1").value
+            let e2=document.getElementById("i2").value
+
+            let choice=document.getElementById("s1").value
+            console.log(choice)
+            
+            switch(choice)
+            {
+                case 'add':
+                let sum=parseInt(e1)+parseInt(e2)
+                   document.getElementById("p1").innerText=`${e1}+${e2}=${sum}`
+                   break
+                case 'sub':
+                    let sub=e1-e2
+                    document.getElementById("p1").innerText=sub
+                    break 
+                case 'mul':
+                    let mul=e1*e2
+                    document.getElementById("p1").innerText=mul
+                    break
+                case 'div':
+                    let div=e1/e2
+                    document.getElementById("p1").innerText=div
+                    break
+
+            }
+
+            
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <form>
+    <div style="color:brown;background-color: yellow; width: fit-content;
+            border-style:groove; border-color: blueviolet; border-width: 5px;
+            ">
+    This is the content of the div 
+  
+    <input type="number" id="i1" >
+    <br>
+    <input type="number" id="i2" >
+    
+    <input type="reset" >
+
+    <br>
+    <br>
+    <br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">hello</a>
+</form>
+</div>
+   
+
+    <select id="s1" onclick="f1()">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+    </select>
+    <p id="p1"></p>
+
+    <ul type="circle" >
+        <li>sad</li>
+        <li>dfsds</li>
+    </ul>
+    <ol type="I">
+        <li>vgn</li>
+        <li>dsh</li>
+    </ol>
+    <table border="2">
+        
+        <thead>
+            <tr><th>Sr.no</th><th>Roll No</th><th>Name</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>52</td><td>klgkf</td></tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

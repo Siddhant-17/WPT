@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+     function f1()
+        {
+            let i1=document.getElementById("i1").value
+           
+            let s1=document.getElementById("s1").value
+            let s2=document.getElementById("s2").value
+            
+
+            switch(s1)
+            {
+                case 'rs':
+                    if(s2=="rs")
+                    console.log(i1)
+                    else if(s2=="dol")
+                    console.log(parseInt(i1)/80)
+                    break
+                case 'dol':
+                    if(s2=="dol")
+                    console.log(i1)
+                    else if(s2=="rs")
+                    console.log(parseInt(i1)*80)
+            }
+        }
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+<body>
+    
+        from <input type="number" id="i1" >
+     
+        <select id="s1">
+            <option value="rs">rupee</option>
+            <option value="dol">doller</option>
+            <option value="er">euro</option>
+        </select>
+        <select id="s2">
+            <option value="rs">rupee</option>
+            <option value="dol">doller</option>
+            <option value="er">euro</option>    
+        </select>
+        <button id="b1" onclick="f1()">convert</button>
+    </body>
+    </html>

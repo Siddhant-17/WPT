@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+             background-color: chartreuse;
+         } 
+         #i3{
+            font-style: italic;
+           
+            background-color: aqua;
+         }
+         .h1{
+            color: firebrick;
+         }
+     </style>
+    <script>
+        function f1()
+        {
+            let e1=document.getElementById("i1").value
+            let r1=document.getElementById("r1")
+            if(r1.checked)
+            {
+                console.log("yes")
+            }
+            
+        }
+      
+
+    </script>
+</head>
+<body>
+    
+<input type="number" id="i1">
+<label for="r1">Male</lable><input type="radio" name="male" onchange="f1()" id="r1">
+<label for="r2">female</lable>
+<input type="radio" name="male" id="r2">
+
+<p id="i3">fdsfdsfdsf dsffds</p>
+<h class="h1">how are you</h>
+<pre>hoi kjnhk jknh
+    jhbj kjbk kljk
+</pre>
+<p>ads
+    sad
+    sad
+    fds
+</p>
+</body>
+</html>

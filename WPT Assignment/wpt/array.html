@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr=[]
+        function f2(){
+
+            let str=""
+            for(x of arr)
+            {
+                console.log(x.name)
+                str=str.concat(x["name"],",",x["age"])
+                
+            }
+            document.getElementById("p").innerHTML=`<pre>${str}</pre><br>`
+        }
+        function f1(){
+            let nm=document.getElementById("i1").value
+            let a=document.getElementById("i2").value
+
+            arr.push({name:nm,age:a})
+        }
+        </script>
+</head>
+<body>
+    
+    name<input type="text" id="i1">
+    age<input type="number" id="i2">
+    <button id="b1" onclick="f1()">ok</button>
+    <button id="b2" onclick="f2()">show</button>
+    <p id="p">
+
+    </p>
+</body>
+</html>

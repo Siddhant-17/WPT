@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1()
+        {
+            let i1=document.getElementById("i1").value
+           
+            let s1=document.getElementById("s1").value
+            let s2=document.getElementById("s2").value
+
+            if(s1=="rs" && s2=="dol")
+            {
+               let ans=parseInt(i1)/80
+               console.log(ans)
+            }
+            if(s1=="rs" && s2=="rs")
+            {
+               let ans=parseInt(i1)
+               console.log(ans)
+            }
+            if(s1=="rs" && s2=="er")
+            {
+               let ans=parseInt(i1)*90
+               console.log(ans)
+            }
+            if(s1=="dol" && s2=="rs")
+            {
+               let ans=parseInt(i1)*80
+               console.log(ans)
+            }
+            if(s1=="dol" && s2=="dol")
+            {
+               let ans=parseInt(i1)
+               console.log(ans)
+            }
+            if(s1=="dol" && s2=="er")
+            {
+               let ans=parseInt(i1)*0.9
+               console.log(ans)
+            }
+            if(s1=="er" && s2=="er")
+            {
+               let ans=parseInt(i1)
+               console.log(ans)
+            }
+            if(s1=="er" && s2=="rs")
+            {
+               let ans=parseInt(i1)/90
+               console.log(ans)
+            }
+            if(s1=="er" && s2=="dol")
+            {
+               let ans=parseInt(i1)/0.9
+               console.log(ans)
+            }
+            
+        }
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+
+
+    from <input type="number" id="i1" >
+ 
+    <select id="s1">
+        <option value="rs">rupee</option>
+        <option value="dol">doller</option>
+        <option value="er">euro</option>
+    </select>
+    <select id="s2">
+        <option value="rs">rupee</option>
+        <option value="dol">doller</option>
+        <option value="er">euro</option>    
+    </select>
+    <button id="b1" onclick="f1()">convert</button>
+</body>
+</html>
